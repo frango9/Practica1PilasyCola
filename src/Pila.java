@@ -1,4 +1,5 @@
 public class Pila {
+
     private Nodo cimaPila;
     private int numElementos;
 
@@ -60,6 +61,23 @@ public class Pila {
             System.out.println(aux.getDato());
             aux = aux.getSiguiente();
         }
+    }
+
+    public int sumarElementos(){
+
+        Nodo aux = cimaPila;
+        int suma = 0;
+
+        while (aux != null) {
+            suma = aux.getDato() + suma;
+            aux = aux.getSiguiente();
+        }
+
+        return suma;
+    }
+
+    public void unirPila(Pila p){
+        //TODO
     }
 
 
