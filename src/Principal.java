@@ -22,7 +22,8 @@ public class Principal {
         System.out.println(p3.sumarElementos());
 
         System.out.println("*****************");
-        p1.unirPila(p2);
+        p1.unirPila(p2);System.out.println("*****************");
+        p2.escribirPila();
     }
 
 }
