@@ -61,6 +61,7 @@ public class Pila {
             System.out.println(aux.getDato());
             aux = aux.getSiguiente();
         }
+
     }
 
     public int sumarElementos(){
@@ -78,6 +79,20 @@ public class Pila {
 
     public void unirPila(Pila p){
         //TODO
+        /*Nodo aux = p.cimaPila;
+
+        while (aux != null) {
+            //System.out.println(aux.getDato());
+            aux = aux.getSiguiente();
+        }
+
+        Nodo aux1 = cimaPila;
+
+
+        while (aux1 != null) {
+            //System.out.println(aux1.getDato());
+            aux1 = aux1.getSiguiente();
+        }*/
     }
 
 
