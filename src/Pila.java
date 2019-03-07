@@ -87,6 +87,9 @@ public class Pila {
 
         }
 
+        p.cimaPila = null;
+
     }
+
 
 }
