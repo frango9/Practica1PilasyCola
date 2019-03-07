@@ -78,10 +78,15 @@ public class Pila {
     }
 
     public void unirPila(Pila p){
-        //TODO
-        //only dead in the future
+        Nodo aux = p.cimaPila;
+
+        while (aux.getSiguiente() != null){
+            aux.setSiguiente(cimaPila);
+
+
+
+        }
 
     }
-
 
 }
