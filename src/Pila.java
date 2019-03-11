@@ -55,7 +55,7 @@ public class Pila {
 
     public void escribirPila() {
         Nodo aux = cimaPila;
-        System.out.println("contenido de la pila");
+        System.out.println("\nContenido de la pila");
 
         while (aux != null) {
             System.out.println(aux.getDato());

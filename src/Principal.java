@@ -2,6 +2,8 @@ public class Principal {
 
     public static void main(String[] args) {
 
+        System.out.println("\n***Prueba de sumarElementos***\n");
+
         Pila p1 = new Pila();
 
         p1.apilar(8);
@@ -9,7 +11,7 @@ public class Principal {
         p1.apilar(4);
         p1.apilar(2);
 
-        System.out.println(p1.sumarElementos());
+        System.out.println("Suma de p1: " + p1.sumarElementos());
 
         Pila p2 = new Pila();
         Pila p3 = new Pila();
@@ -26,8 +28,9 @@ public class Principal {
         p4.apilar(1);
         p4.apilar(4);
 
-        System.out.println(sumElementos(p2));
+        System.out.println("Suma de p2: " + sumElementos(p2));
 
+        System.out.println("\n***Pruebas de unirPila***\n");
 
         p1.unirPila(p2);
 
@@ -37,7 +40,7 @@ public class Principal {
 
         p3.escribirPila();
 
-        //*******************************************************************************************************
+        System.out.println("\n***Prueba de dejarN***\n");
 
         Cola c1 = new Cola();
         Cola c2 = new Cola();
@@ -73,6 +76,8 @@ public class Principal {
         c4.dejarN(0);
         c4.escribirCola();
 
+        System.out.println("\n***Prueba de dejaN***\n");
+
         Cola c5 = new Cola();
         Cola c6 = new Cola();
         Cola c7 = new Cola();
@@ -94,6 +99,18 @@ public class Principal {
         c8.encolar(40);
         c8.encolar(10);
         c8.encolar(50);
+
+        dejaN(2,c5);
+        c5.escribirCola();
+
+        dejaN(4,c6);
+        c6.escribirCola();
+
+        dejaN(9,c7);
+        c7.escribirCola();
+
+        dejaN(0,c8);
+        c8.escribirCola();
 
     }
 
@@ -126,11 +143,19 @@ public class Principal {
         p2 = null;
     }
 
-    void dejaN( int n, Cola c){
+    public static void dejaN( int n, Cola c){
 
         int aux;
-
         aux = c.numElemCola();
+
+        if(aux > n) {
+            for (int i = 0; i < n; i++) {
+                c.encolar(c.desencolar());
+            }
+            for (int j = 0; j < aux - n; j++) {
+                c.desencolar();
+            }
+        }
 
     }
 }
