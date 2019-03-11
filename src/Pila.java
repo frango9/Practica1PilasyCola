@@ -70,7 +70,7 @@ public class Pila {
         int suma = 0;
 
         while (aux != null) {
-            suma = aux.getDato() + suma;
+            suma += aux.getDato();
             aux = aux.getSiguiente();
         }
 
@@ -81,12 +81,11 @@ public class Pila {
         Nodo aux = p.cimaPila;
 
         while (aux.getSiguiente() != null){
-            aux.setSiguiente(cimaPila);
-
-
-
+            aux = aux.getSiguiente();
+            numElementos++;
         }
-
+        aux.setSiguiente(cimaPila);
+        cimaPila = p.cimaPila;
         p.cimaPila = null;
 
     }

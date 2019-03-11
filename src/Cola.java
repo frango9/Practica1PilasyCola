@@ -65,11 +65,32 @@ public class Cola {
             System.out.print(aux.getDato() + "  ");
             aux = aux.getSiguiente();
         }
+        System.out.println();
     }
 
     public int numElemCola() {       // Devuelve el número de elementos de la cola
 
         return numElem;
+    }
+
+    void dejarN(int n){
+
+        Nodo aux = cabeza;
+
+        if(n == 0){
+            cabeza = null;
+            fin = null;
+        }
+        else if(colaVacia()){
+            aux = null;
+        }
+        else if(n >= numElemCola());
+        else{
+            for (int i= 0;  i < n-1 ; i++) {
+                aux = aux.getSiguiente();
+            }
+            aux.setSiguiente(null);
+        }
     }
 
 }
